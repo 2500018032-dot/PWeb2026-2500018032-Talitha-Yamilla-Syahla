@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout CSS Modifikasi Lanjut</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr; /* 4 kolom */
+            grid-template-rows: 80px 60px 300px 100px; /* 4 baris */
+            grid-template-areas: 
+                "header header header header"
+                "nav nav nav nav"
+                "left content content right"
+                "footer footer footer footer";
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #ffb6c1;
+            text-align: center;
+            line-height: 80px;
+            font-weight: bold;
+        }
+
+        .nav {
+            grid-area: nav;
+            background: #ffd8fa;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+        }
+
+        .left {
+            grid-area: left;
+            background: #ff7fd9;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .content {
+            grid-area: content;
+            background: #fcf8cf;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .right {
+            grid-area: right;
+            background: #ff87e3;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #ffabab;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        div {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">HEADER</div>
+    <div class="nav">NAVBAR / MENU</div>
+
+    <div class="left">SIDEBAR KIRI</div>
+    <div class="content">CONTENT UTAMA</div>
+    <div class="right">SIDEBAR KANAN / IKLAN</div>
+
+    <div class="footer">FOOTER</div>
+</div>
+
+</body>
+</html>
